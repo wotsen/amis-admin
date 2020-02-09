@@ -5,7 +5,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { render as renderSchema } from "amis";
-import * as copy from 'copy-to-clipboard';
+import copy from 'copy-to-clipboard';
 import ReactDOM from "react-dom";
 import { Action, SchemaNode } from 'amis/lib/types';
 import * as qs from 'qs';
@@ -21,8 +21,8 @@ export default class AMisRenderer extends Vue {
     @Prop() private schema!: object;
     @Prop() private updateLocation!: Function;
     @Prop() private onAction!: Function;
-    
-    theme = 'default'
+
+    theme:string = 'default'
     
     updateRoute (location: string, replace: boolean) {
         if (location === 'goBack') {
@@ -31,7 +31,7 @@ export default class AMisRenderer extends Vue {
         this.$router[replace ? 'replace' : 'push'](this.normalizeLink(location));
     }
     
-    env: any = {
+    env:any = {
         session: 'global',
         updateLocation: this.updateLocation || this.updateRoute,
         isCurrentUrl: (to: string) => {
