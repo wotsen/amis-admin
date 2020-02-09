@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "amis": "1.0.8",
+    "amis": "1.0.9",
     "axios": "^0.19.2",
     "axios-mock-adapter": "^1.17.0",
     "bootstrap": "^3.4.1",
