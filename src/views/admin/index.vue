@@ -38,6 +38,16 @@ export default {
             isFold: false, //导航菜单面板是否折叠
             hasSession: false //为了防止其他页面请求时用到先前的session
         };
+    },
+    created () {
+        this.initMenu()
+    },
+    methods: {
+        initMenu () {
+            if (window.innerWidth <= 500 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                this.isFold = true
+            }
+        }
     }
 };
 </script>
