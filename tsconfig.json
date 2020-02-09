@@ -2,15 +2,21 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "noImplicitAny": false,
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "emitDecoratorMetadata": true,
     "types": [
       "webpack-env"
     ],
@@ -34,6 +40,7 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules/*"
+    "node_modules/*",
+    "mock/**/*"
   ]
 }

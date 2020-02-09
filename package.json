@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "amis": "^1.0.9",
+    "axios": "^0.19.2",
+    "axios-mock-adapter": "^1.17.0",
     "bootstrap": "^3.4.1",
     "core-js": "^3.6.4",
+    "element-ui": "^2.8.2",
     "react-dom": "^16.12.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.2",
@@ -33,7 +36,9 @@
     "eslint-plugin-vue": "^6.1.2",
     "lint-staged": "^9.5.0",
     "typescript": "~3.7.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
