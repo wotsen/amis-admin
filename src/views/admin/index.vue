@@ -13,15 +13,24 @@
             <div class="main-wrapper">
                 <router-view></router-view>
             </div>
+            <ToastComponent key="toast" position="top-right" theme="default"/>
+            <AlertComponent key="alert" theme="default"/>
         </div>
     </div>
 </template>
 
 <script>
 import Menu from "./components/menu.vue";
+import { ReactInVue } from 'vuera'
+import {
+    ToastComponent,
+    AlertComponent,
+} from 'amis';
 export default {
     name: "Home",
     components: {
+        ToastComponent: ReactInVue(ToastComponent),
+        AlertComponent: ReactInVue(AlertComponent),
         Menu
     },
     data() {
