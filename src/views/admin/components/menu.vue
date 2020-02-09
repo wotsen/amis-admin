@@ -42,7 +42,7 @@ export default {
         return {
             menu: [
                 {
-                    name: "首页",
+                    name: "AMis Boilerplate",
                     icon: "el-icon-s-home"
                 },
                 {
@@ -52,11 +52,11 @@ export default {
                 },
                 {
                     name: "表单页面",
-                    icon: "el-icon-s-tools",
+                    icon: "el-icon-help",
                     children: [
                         {
                             name: "常规表单",
-                            icon: "el-icon-s-check",
+                            icon: "el-icon-picture-outline-round",
                             path: "/admin/form/basic"
                         },
                         {
@@ -73,7 +73,7 @@ export default {
                 },
                 {
                     name: "会员管理",
-                    icon: "el-icon-s-tools",
+                    icon: "el-icon-star-off",
                     children: [
                         {
                             name: "列表",
@@ -84,46 +84,6 @@ export default {
                 }
             ]
         };
-    },
-    computed: {
-        // ...mapState(["user"])
-    },
-    mounted() {
-        // setTimeout(()=>{
-        //     this.reachData();
-        // },500)
-    },
-    methods: {
-        reachData() {
-            this.menu.forEach((item, index) => {
-                if (item.path === "/staff_manager") {
-                    if (
-                        this.user.data.enterprise_id != 100103 &&
-                        this.user.data.enterprise_id != 145212 &&
-                        this.user.data.enterprise_id != 145256 &&
-                        this.user.data.enterprise_id != 631590 &&
-                        this.user.data.enterprise_id != 631888
-                    ) {
-                        this.menu.splice(index, 1);
-                    }
-                    return;
-                }
-                if (!item.children) {
-                    return;
-                }
-                for (const i in item.children) {
-                    if (item.children[i].path === "/sport/score") {
-                        if (
-                            this.user.data.enterprise_id != 631817 &&
-                            this.user.data.enterprise_id != 145212
-                        ) {
-                            item.children.splice(i, 1);
-                        }
-                        return;
-                    }
-                }
-            });
-        }
     }
 };
 </script>

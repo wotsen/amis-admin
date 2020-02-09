@@ -21,7 +21,8 @@
     "vue-router": "^3.1.5",
     "vuera": "^0.2.7",
     "vuex": "^3.1.2",
-    "copy-to-clipboard": "3.0.8"
+    "copy-to-clipboard": "3.0.8",
+    "qs": "6.5.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.18.0",
@@ -41,13 +42,9 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
-      "vue-cli-service lint",
-      "git add"
+      "vue-cli-service lint"
     ]
   }
 }
