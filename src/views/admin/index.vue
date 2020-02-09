@@ -35,8 +35,7 @@ export default {
     },
     data() {
         return {
-            isFold: false, //导航菜单面板是否折叠
-            hasSession: false //为了防止其他页面请求时用到先前的session
+            isFold: false
         };
     },
     created () {
