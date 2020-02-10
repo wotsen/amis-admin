@@ -53,8 +53,10 @@ export default {
 
 <style lang="less" scoped>
 .layout {
-    height: 100vh;
     display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 .menu-wrapper {
     height: 100%;
