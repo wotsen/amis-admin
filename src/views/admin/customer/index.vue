@@ -82,7 +82,14 @@ export default {
                                 {
                                     type: "button",
                                     icon: "fa fa-pencil",
-                                    tooltip: "编辑"
+                                    tooltip: "编辑",
+                                    actionType: "drawer",
+                                    drawer: {
+                                        position: "left",
+                                        size: "md",
+                                        title: "提示",
+                                        body: "这是个简单的弹框"
+                                    }
                                 },
                                 {
                                     type: "button",
