@@ -1,27 +1,29 @@
 {
-  "name": "vue-ts",
+  "name": "dmp-cli",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "tauri:build": "vue-cli-service tauri:build",
+    "tauri:serve": "vue-cli-service tauri:serve"
   },
   "dependencies": {
     "amis": "^1.0.15-beta.9",
     "axios": "^0.19.2",
     "axios-mock-adapter": "^1.17.0",
     "bootstrap": "^3.4.1",
+    "copy-to-clipboard": "3.0.8",
     "core-js": "^3.6.4",
     "element-ui": "^2.8.2",
+    "qs": "6.5.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.2",
     "vue-property-decorator": "^8.3.0",
     "vue-router": "^3.1.5",
     "vuera": "^0.2.7",
-    "vuex": "^3.1.2",
-    "copy-to-clipboard": "3.0.8",
-    "qs": "6.5.1"
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.18.0",
@@ -35,11 +37,12 @@
     "@vue/eslint-config-typescript": "^5.0.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
     "lint-staged": "^9.5.0",
     "typescript": "~3.7.5",
-    "vue-template-compiler": "^2.6.11",
-    "less": "^3.0.4",
-    "less-loader": "^4.1.0"
+    "vue-cli-plugin-tauri": "~0.13.0",
+    "vue-template-compiler": "^2.6.11"
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [

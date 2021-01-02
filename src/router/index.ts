@@ -7,6 +7,9 @@ import Editor from '../views/admin/form/editor/index.vue'
 import Wizard from '../views/admin/form/wizard/index.vue'
 import Dashboard from '../views/admin/dashboard/index.vue'
 import Customer from '../views/admin/customer/index.vue'
+import SystemSetting from '../views/admin/system/system-setting/index.vue'
+import SystemInfo from '../views/admin/system/system-info/index.vue'
+import ModuleManage from '../views/admin/system/module-manage/index.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +23,21 @@ const routes = [
                 name: 'Dashboard',
                 path: '/admin/dashboard',
                 component: Dashboard,
+            },
+            {
+                name: 'SystemSetting',
+                path: '/admin/system/system-setting',
+                component: SystemSetting,
+            },
+            {
+                name: 'SystemInfo',
+                path: '/admin/system/system-info',
+                component: SystemInfo,
+            },
+            {
+                name: 'ModuleManage',
+                path: '/admin/system/module-manage',
+                component: ModuleManage,
             },
             {
                 name: 'Customer',

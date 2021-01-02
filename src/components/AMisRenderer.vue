@@ -22,7 +22,7 @@ export default class AMisRenderer extends Vue {
     @Prop() private updateLocation!: Function;
     @Prop() private onAction!: Function;
 
-    theme:string = 'default'
+    theme = 'default'
     
     updateRoute (location: string, replace: boolean) {
         if (location === 'goBack') {
@@ -31,7 +31,7 @@ export default class AMisRenderer extends Vue {
         this.$router[replace ? 'replace' : 'push'](this.normalizeLink(location));
     }
     
-    env:any = {
+    env: any = {
         session: 'global',
         updateLocation: this.updateLocation || this.updateRoute,
         isCurrentUrl: (to: string) => {
@@ -128,7 +128,7 @@ export default class AMisRenderer extends Vue {
         const hash = ~idx2 ? to.substring(idx2) : '';
         if (!pathname) {
             pathname = location.pathname;
-        }else if (pathname[0] != '/' && !/^https?\:\/\//.test(pathname)) {
+        }else if (pathname[0] != '/' && !/^https?:\/\//.test(pathname)) {
             const relativeBase = location.pathname;
             const paths = relativeBase.split('/');
             paths.pop();

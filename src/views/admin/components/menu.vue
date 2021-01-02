@@ -51,6 +51,27 @@ export default {
                     icon: "el-icon-office-building"
                 },
                 {
+                    name: "系统",
+                    icon: "el-icon-s-tools",
+                    children: [
+                        {
+                            name: "系统信息",
+                            icon: "el-icon-info",
+                            path: "/admin/system/system-info"
+                        },
+                        {
+                            name: "系统设置",
+                            icon: "el-icon-setting",
+                            path: "/admin/system/system-setting"
+                        },
+                        {
+                            name: "模块管理",
+                            icon: "el-icon-s-management",
+                            path: "/admin/system/module-manage"
+                        }
+                    ]
+                },
+                {
                     name: "表单页面",
                     icon: "el-icon-help",
                     children: [
